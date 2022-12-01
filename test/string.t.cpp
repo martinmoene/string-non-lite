@@ -844,7 +844,7 @@ CASE( "split: Split string into single characters given empty delimiter" )
 #if string_HAVE_REGEX
     EXPECT( split("abc", regex_delimiter("")) == golden );
 #endif
-    // Not eligable:
+    // Not eligible:
     // EXPECT( split("abc", limit_delimiter("")) == golden );
     // EXPECT( split("abc", char_delimiter('x')) == golden );
 }
