@@ -1,14 +1,14 @@
 // Copyright 2021-2021 by Martin Moene
 //
-// https://github.com/martinmoene/string-lite
+// https://github.com/martinmoene/string-non-lite
 //
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
 #pragma once
 
-#ifndef TEST_STRING_LITE_H_INCLUDED
-#define TEST_STRING_LITE_H_INCLUDED
+#ifndef TEST_STRING_NON_LITE_H_INCLUDED
+#define TEST_STRING_NON_LITE_H_INCLUDED
 
 #include string_STRING_HEADER
 
@@ -261,6 +261,6 @@ extern lest::tests & specification();
 
 #define CASE( name ) lest_CASE( specification(), name )
 
-#endif // TEST_STRING_LITE_H_INCLUDED
+#endif // TEST_STRING_NON_LITE_H_INCLUDED
 
 // end of file

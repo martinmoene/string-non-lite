@@ -24,32 +24,32 @@ table = (
         , '    VERSION {major}.{minor}.{patch}' )
 
     , ( 'CMakeLists.txt'
-        , r'set\W+string_lite_version\W+"([0-9]+\.[0-9]+\.[0-9]+)"\W+$'
-        , 'set( string_lite_version "{major}.{minor}.{patch}" )\n' )
+        , r'set\W+string_non_lite_version\W+"([0-9]+\.[0-9]+\.[0-9]+)"\W+$'
+        , 'set( string_non_lite_version "{major}.{minor}.{patch}" )\n' )
 
 #    , ( 'example/cmake-pkg/CMakeLists.txt'
-#        , r'set\W+string_lite_version\W+"([0-9]+\.[0-9]+(\.[0-9]+)?)"\W+$'
-#        , 'set( string_lite_version "{major}.{minor}" )\n' )
+#        , r'set\W+string_non_lite_version\W+"([0-9]+\.[0-9]+(\.[0-9]+)?)"\W+$'
+#        , 'set( string_non_lite_version "{major}.{minor}" )\n' )
 #
 #    , ( 'script/install-xxx-pkg.py'
-#        , r'\string_lite_version\s+=\s+"([0-9]+\.[0-9]+\.[0-9]+)"\s*$'
-#        , 'string_lite_version = "{major}.{minor}.{patch}"\n' )
+#        , r'\string_non_lite_version\s+=\s+"([0-9]+\.[0-9]+\.[0-9]+)"\s*$'
+#        , 'string_non_lite_version = "{major}.{minor}.{patch}"\n' )
 
     , ( 'conanfile.py'
         , r'version\s+=\s+"([0-9]+\.[0-9]+\.[0-9]+)"\s*$'
         , 'version = "{major}.{minor}.{patch}"' )
 
     , ( 'include/nonstd/string.hpp'
-        , r'\#define\s+string_lite_MAJOR\s+[0-9]+\s*$'
-        , '#define string_lite_MAJOR  {major}' )
+        , r'\#define\s+string_non_lite_MAJOR\s+[0-9]+\s*$'
+        , '#define string_non_lite_MAJOR  {major}' )
 
     , ( 'include/nonstd/string.hpp'
-        , r'\#define\s+string_lite_MINOR\s+[0-9]+\s*$'
-        , '#define string_lite_MINOR  {minor}' )
+        , r'\#define\s+string_non_lite_MINOR\s+[0-9]+\s*$'
+        , '#define string_non_lite_MINOR  {minor}' )
 
     , ( 'include/nonstd/string.hpp'
-        , r'\#define\s+string_lite_PATCH\s+[0-9]+\s*$'
-        , '#define string_lite_PATCH  {patch}\n' )
+        , r'\#define\s+string_non_lite_PATCH\s+[0-9]+\s*$'
+        , '#define string_non_lite_PATCH  {patch}\n' )
 )
 
 # End configuration.

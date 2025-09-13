@@ -1,6 +1,6 @@
 // Copyright 2021-2021 by Martin Moene
 //
-// https://github.com/martinmoene/string-lite
+// https://github.com/martinmoene/string-non-lite
 //
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
@@ -70,17 +70,17 @@ lest::tests & specification()
     return tests;
 }
 
-CASE( "string-lite version" "[.string][.version]" )
+CASE( "string-non-lite version" "[.string][.version]" )
 {
-    string_PRESENT( string_lite_MAJOR   );
-    string_PRESENT( string_lite_MINOR   );
-    string_PRESENT( string_lite_PATCH   );
-    string_PRESENT( string_lite_VERSION );
+    string_PRESENT( string_non_lite_MAJOR   );
+    string_PRESENT( string_non_lite_MINOR   );
+    string_PRESENT( string_non_lite_PATCH   );
+    string_PRESENT( string_non_lite_VERSION );
 
     // string_PRESENT( string_CPP98_FALLBACK );
 }
 
-CASE( "string-lite configuration" "[.string][.config]" )
+CASE( "string-non-lite configuration" "[.string][.config]" )
 {
     string_PRESENT( string_CPLUSPLUS );
     string_PRESENT( string_CPLUSPLUS_V );

@@ -1,6 +1,6 @@
-# string lite: string facilities for C++98 and later (In Progress)
+# string non-lite: string facilities for C++98 and later (In Progress)
 
-[![Language](https://img.shields.io/badge/C%2B%2B-98/11/14/17/20-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B#Standardization) [![License](https://img.shields.io/badge/license-BSL-blue.svg)](https://opensource.org/licenses/BSL-1.0) [![Build Status](https://github.com/martinmoene/string-lite/actions/workflows/ci.yml/badge.svg)](https://github.com/martinmoene/string-lite/actions/workflows/ci.yml) [![Build Status](https://travis-ci.org/martinmoene/string-lite.svg?branch=master)](https://travis-ci.org/martinmoene/string-lite) [![Build status](https://ci.appveyor.com/api/projects/status/1ha3wnxtam547m8p?svg=true)](https://ci.appveyor.com/project/martinmoene/string-lite) [![Version](https://badge.fury.io/gh/martinmoene%2Fstring-lite.svg)](https://github.com/martinmoene/string-lite/releases) [![download](https://img.shields.io/badge/latest-download-blue.svg)](https://github.com/martinmoene/string-lite/blob/master/include/nonstd/string.hpp) [![Conan](https://img.shields.io/badge/on-conan-blue.svg)](https://conan.io/center/string-lite) [![Try it on wandbox](https://img.shields.io/badge/on-wandbox-blue.svg)](https://wandbox.org/) [![Try it on godbolt online](https://img.shields.io/badge/on-godbolt-blue.svg)](https://godbolt.org/)
+[![Language](https://img.shields.io/badge/C%2B%2B-98/11/14/17/20-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B#Standardization) [![License](https://img.shields.io/badge/license-BSL-blue.svg)](https://opensource.org/licenses/BSL-1.0) [![Build Status](https://github.com/martinmoene/string-non-lite/actions/workflows/ci.yml/badge.svg)](https://github.com/martinmoene/string-non-lite/actions/workflows/ci.yml) [![Build Status](https://travis-ci.org/martinmoene/string-non-lite.svg?branch=master)](https://travis-ci.org/martinmoene/string-non-lite) [![Build status](https://ci.appveyor.com/api/projects/status/1ha3wnxtam547m8p?svg=true)](https://ci.appveyor.com/project/martinmoene/string-non-lite) [![Version](https://badge.fury.io/gh/martinmoene%2Fstring-non-lite.svg)](https://github.com/martinmoene/string-non-lite/releases) [![download](https://img.shields.io/badge/latest-download-blue.svg)](https://github.com/martinmoene/string-non-lite/blob/master/include/nonstd/string.hpp) [![Conan](https://img.shields.io/badge/on-conan-blue.svg)](https://conan.io/center/string-non-lite) [![Try it on wandbox](https://img.shields.io/badge/on-wandbox-blue.svg)](https://wandbox.org/) [![Try it on godbolt online](https://img.shields.io/badge/on-godbolt-blue.svg)](https://godbolt.org/)
 
 **Contents**  
 
@@ -56,33 +56,33 @@ prompt> g++ -std=c++98 -Wall -I../include -o 01-basic.exe 01-basic.cpp && 01-bas
 
 ## In a nutshell
 
-**string lite** is a single-file header-only library to provide various string algorithms. Firstly meant to get you up and running easily, not necessarily to provide everything that might be useful and in the most efficient manner.
+**string non-lite** is a single-file header-only library to provide various string algorithms. Firstly meant to get you up and running easily, not necessarily to provide everything that might be useful and in the most efficient manner.
 
-Creating *string lite* I've had a look at the [C++ standard](https://eel.is/c++draft/#strings), [Boost](https://www.boost.org/doc/libs/1_60_0/doc/html/string_algo.html), [Facebook Folly](https://github.com/facebook/folly/blob/master/folly/String.h), the [Python standard library](https://docs.python.org/3/library/string.html), the [proposal for `std::split()`](http://wg21.link/n3593) and several algorithms I created over time.
+Creating *string non-lite* I've had a look at the [C++ standard](https://eel.is/c++draft/#strings), [Boost](https://www.boost.org/doc/libs/1_60_0/doc/html/string_algo.html), [Facebook Folly](https://github.com/facebook/folly/blob/master/folly/String.h), the [Python standard library](https://docs.python.org/3/library/string.html), the [proposal for `std::split()`](http://wg21.link/n3593) and several algorithms I created over time.
 
-**Features and properties of string lite** are ease of installation (single header), freedom of dependencies other than the standard library.
+**Features and properties of string non-lite** are ease of installation (single header), freedom of dependencies other than the standard library.
 
 ## License
 
-*string lite* is distributed under the [Boost Software License](https://github.com/martinmoene/bit-lite/blob/master/LICENSE.txt).
+*string non-lite* is distributed under the [Boost Software License](https://github.com/martinmoene/bit-non-lite/blob/master/LICENSE.txt).
 
 Note: this repository contains a copy of several files from the [CsString library by Ansel Sermersheim and Barbara Geller](https://github.com/copperspice/cs_string) for testing purposes. The CsString library is released under the BSD 2-clause license. 
 
 ## Dependencies
 
-*string lite* has no other dependencies than the [C++ standard library](http://en.cppreference.com/w/cpp/header).
+*string non-lite* has no other dependencies than the [C++ standard library](http://en.cppreference.com/w/cpp/header).
 
 ## Installation and use
 
-*string lite* is a single-file header-only library. Put `string.hpp` in the [include](include) folder directly into the project source tree or somewhere reachable from your project.
+*string non-lite* is a single-file header-only library. Put `string.hpp` in the [include](include) folder directly into the project source tree or somewhere reachable from your project.
 
 ## Synopsis
 
 **Contents**  
-[Documentation of *string lite*](#documentation-of-string-lite)  
+[Documentation of *string non-lite*](#documentation-of-string-non-lite)  
 [Configuration](#configuration)  
 
-### Documentation of *string lite*
+### Documentation of *string non-lite*
 
 | Kind               | Type or function                            | Notes |
 |--------------------|---------------------------------------------|-------|
@@ -198,11 +198,11 @@ Note: with `StringT const &` the string type can also be `string_view`.
 
 #### Tweak header
 
-If the compiler supports [`__has_include()`](https://en.cppreference.com/w/cpp/preprocessor/include), *string lite* supports the [tweak header](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html) mechanism. Provide your *tweak header* as `nonstd/string.tweak.hpp` in a folder in the include-search-path. In the tweak header, provide definitions as documented below, like `#define string_CPLUSPLUS 201103L`.
+If the compiler supports [`__has_include()`](https://en.cppreference.com/w/cpp/preprocessor/include), *string non-lite* supports the [tweak header](https://vector-of-bool.github.io/2020/10/04/lib-configuration.html) mechanism. Provide your *tweak header* as `nonstd/string.tweak.hpp` in a folder in the include-search-path. In the tweak header, provide definitions as documented below, like `#define string_CPLUSPLUS 201103L`.
 
 #### Select internal string_view, `nonstd::string_view` or `std::string_view`
 
-At default, *string lite* uses an internal `string_view`. You can however override this default and explicitly request to use  string-view lite's `nonstd::string_view` as `nonstd::string::string_view` or use C++17's `std::string_view` via the following macros.
+At default, *string non-lite* uses an internal `string_view`. You can however override this default and explicitly request to use  string-view lite's `nonstd::string_view` as `nonstd::string::string_view` or use C++17's `std::string_view` via the following macros.
 
 -D<b>string\_CONFIG\_SELECT\_STRING_VIEW</b>=string_CONFIG_SELECT_STRING_VIEW_INTERNAL 
 Define this to `string_CONFIG_SELECT_STRING_VIEW_NONSTD` to select `nonstd::string_view` as `nonstd::string::string_view`. Define this to `string_CONFIG_SELECT_STRING_VIEW_STD` to select `std::string_view` as `nonstd::string::string_view`. Default is undefined, which has the same effect as defining to `string_CONFIG_SELECT_STRING_VIEW_INTERNAL`.
@@ -230,10 +230,10 @@ Appendix
 <a id="a1"></a>
 ### A.1 Compile-time information
 
-In the test runner, the version of *string-lite* is available via tag `[.version]`. The following tags are available for information on the compiler and on the C++ standard library used: `[.compiler]`, `[.stdc++]`, `[.stdlanguage]` and `[.stdlibrary]`.
+In the test runner, the version of *string-non-lite* is available via tag `[.version]`. The following tags are available for information on the compiler and on the C++ standard library used: `[.compiler]`, `[.stdc++]`, `[.stdlanguage]` and `[.stdlibrary]`.
 
 <a id="a2"></a>
-### A.2 *string-lite* test specification
+### A.2 *string-non-lite* test specification
 
 <details>
 <summary>click to expand</summary>

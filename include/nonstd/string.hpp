@@ -1,19 +1,19 @@
 //
 // Copyright (c) 2021-2021 Martin Moene
 //
-// https://github.com/martinmoene/string-lite
+// https://github.com/martinmoene/string-non-lite
 //
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-#ifndef NONSTD_STRING_LITE_HPP
-#define NONSTD_STRING_LITE_HPP
+#ifndef NONSTD_STRING_NON_LITE_HPP
+#define NONSTD_STRING_NON_LITE_HPP
 
-#define string_lite_MAJOR  0
-#define string_lite_MINOR  0
-#define string_lite_PATCH  0
+#define string_non_lite_MAJOR  0
+#define string_non_lite_MINOR  0
+#define string_non_lite_PATCH  0
 
-#define string_lite_VERSION  string_STRINGIFY(string_lite_MAJOR) "." string_STRINGIFY(string_lite_MINOR) "." string_STRINGIFY(string_lite_PATCH)
+#define string_non_lite_VERSION  string_STRINGIFY(string_non_lite_MAJOR) "." string_STRINGIFY(string_non_lite_MINOR) "." string_STRINGIFY(string_non_lite_PATCH)
 
 #define string_STRINGIFY(  x )  string_STRINGIFY_( x )
 #define string_STRINGIFY_( x )  #x
@@ -67,9 +67,9 @@
 #endif
 
 #if      string_CONFIG_SELECT_STRING_VIEW==string_CONFIG_SELECT_STRING_VIEW_STD && !string_HAVE_STD_STRING_VIEW
-# error  string-lite: std::string_view selected but is not available: C++17?
+# error  string-non-lite: std::string_view selected but is not available: C++17?
 #elif   0 // string_CONFIG_SELECT_STRING_VIEW==string_CONFIG_SELECT_STRING_VIEW_NONSTD && !defined(NONSTD_SV_LITE_H_INCLUDED)
-# error  string-lite: string-view-lite selected but is not available: nonstd/string_view.hpp included before nonstd/string.hpp?
+# error  string-non-lite: string-view-lite selected but is not available: nonstd/string_view.hpp included before nonstd/string.hpp?
 #endif
 
 // C++ language version detection (C++23 is speculative):
@@ -452,7 +452,7 @@ string_MAKE_HAS_METHOD_( starts_with )
 string_MAKE_HAS_METHOD_( ends_with )
 string_MAKE_HAS_METHOD_( replace )
 
-// string-lite API functions:
+// string-non-lite API functions:
 
 // Utilities:
 
@@ -2308,4 +2308,4 @@ namespace nonstd {
 
 } // namespace nonstd
 
-#endif // NONSTD_STRING_LITE_HPP
+#endif // NONSTD_STRING_NON_LITE_HPP

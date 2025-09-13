@@ -56,7 +56,7 @@ matrix:
 
 before_build:
     - mkdir build && cd build
-    - cmake -A %platform% -G "%generator%" -DSTRING_LITE_OPT_BUILD_TESTS=ON -DSTRING_LITE_OPT_BUILD_EXAMPLES=OFF ..
+    - cmake -A %platform% -G "%generator%" -DSTRING_NON_LITE_OPT_BUILD_TESTS=ON -DSTRING_NON_LITE_OPT_BUILD_EXAMPLES=OFF ..
 
 build_script:
     - cmake --build . --config %configuration%

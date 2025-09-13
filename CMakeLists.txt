@@ -1,26 +1,26 @@
 # Copyright 2021-2021 by Martin Moene
 #
-# https://github.com/martinmoene/string-lite
+# https://github.com/martinmoene/string-non-lite
 #
 # Distributed under the Boost Software License, Version 1.0.
 # (See accompstringing file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
 cmake_minimum_required( VERSION 3.5 FATAL_ERROR )
 
-# string-lite project and version, updated by script/update-version.py:
+# string-non-lite project and version, updated by script/update-version.py:
 
 project(
     string_lite
     VERSION 0.9.1
 #   DESCRIPTION "A strong string for C++98, C++11 and later in a single-file header-only library"
-#   HOMEPAGE_URL "https://github.com/martinmoene/string-lite"
+#   HOMEPAGE_URL "https://github.com/martinmoene/string-non-lite"
     LANGUAGES CXX )
 
 # Package information:
 
 set( unit_name       "string" )
 set( package_nspace  "nonstd" )
-set( package_name    "${unit_name}-lite" )
+set( package_name    "${unit_name}-non-lite" )
 set( package_version "${${PROJECT_NAME}_VERSION}" )
 
 message( STATUS "Project '${PROJECT_NAME}', package '${package_name}' version: '${package_version}'")
@@ -35,17 +35,17 @@ endif()
 
 # If toplevel project, enable building and performing of tests, disable building of examples:
 
-option( STRING_LITE_OPT_BUILD_TESTS    "Build and perform string-lite tests" ${STRING_IS_TOPLEVEL_PROJECT} )
-option( STRING_LITE_OPT_BUILD_EXAMPLES "Build string-lite examples" OFF )
+option( STRING_NON_LITE_OPT_BUILD_TESTS    "Build and perform string-non-lite tests" ${STRING_IS_TOPLEVEL_PROJECT} )
+option( STRING_NON_LITE_OPT_BUILD_EXAMPLES "Build string-non-lite examples" OFF )
 
 # If requested, build and perform tests, build examples:
 
-if ( STRING_LITE_OPT_BUILD_TESTS )
+if ( STRING_NON_LITE_OPT_BUILD_TESTS )
     enable_testing()
     add_subdirectory( test )
 endif()
 
-if ( STRING_LITE_OPT_BUILD_EXAMPLES )
+if ( STRING_NON_LITE_OPT_BUILD_EXAMPLES )
     add_subdirectory( example )
 endif()
 
